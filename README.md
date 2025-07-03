@@ -7,5 +7,4 @@ The codes were written for the analyses mentioned in: Purple, R. J., Gupta, R., 
 
 1. Visit https://osf.io/t69ap/files/osfstorage to download the open-access spike data.
 2. Read the Tutorial.pdf to understand file arrangements in the downloaded data and pre-processing before excersing the MSD and LZC analyses.
-!!! danger
-   okk
+
