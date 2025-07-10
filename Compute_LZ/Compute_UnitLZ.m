@@ -1,6 +1,7 @@
 MainPath='C:\Users\xv20319\OneDrive - University of Bristol\Documents\MATLAB\Psilocybin\';
+dt=0.010;%in sec. 
 
-Drugs={'Saline_day0','Psilocybin_day0','Psilocybin_1mg'};
+Drugs={'Saline','Psilocybin_03mg','Psilocybin_1mg'};
 Rats={'S','T','U','V'};
 BrainReg={'Inf','Pre','Cing'};
 States={'Base','Act_Base','Pstdrg2','Act_Pstdrg1','Pstdrg3','Act_Pstdrg2'};
@@ -19,7 +20,7 @@ for drug=1:length(Drugs)
                 for state=1:length(States)
                     FileFound=1;
                     try 
-                        filename=[MainPath,SubPath1,SubPath2,States{state},'_',BrainReg{BR},'_',CellTyp{CT},'_dt10ms.mat'];
+                        filename=[MainPath,SubPath1,SubPath2,States{state},'_',BrainReg{BR},'_',CellTyp{CT},'_dt',num2str(1000*dt,'%d'),'ms.mat'];
                         load(filename);
                         c_store=NaN*ones(size(SpikeMatrix,1),1);
                     catch ME
