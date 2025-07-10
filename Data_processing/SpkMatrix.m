@@ -27,7 +27,7 @@ for drug=1:length(Drugs)
                     load(filename);                
                     if ~isempty(SpkTm)
                         SpikeMatrix=bin_data(SpkTm,Ti(state),dt);
-                        filename=[MainPath,SubPath1,SubPath3,States{state},'_',BrainReg{BR},'_',CellTyp{CT},'_dt20ms.mat'];%change the label to 10ms for timebin 0.010s.
+                        filename=[MainPath,SubPath1,SubPath3,States{state},'_',BrainReg{BR},'_',CellTyp{CT},'_dt',num2str(1000*dt,'%d'),'ms.mat'];%change the label to 10ms for timebin 0.010s.
                         save(filename,'SpikeMatrix');
                     end
                 end
