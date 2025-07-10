@@ -1,6 +1,7 @@
 MainPath='C:\Users\xv20319\OneDrive - University of Bristol\Documents\MATLAB\Psilocybin\';
+dt=0.020;%in sec. Change to the dt value you choose.
 
-Drugs={'Saline_day0','Psilocybin_day0','Psilocybin_1mg'};
+Drugs={'Saline','Psilocybin_03mg','Psilocybin_1mg'};
 Rats={'S','T','U','V'};
 BrainReg={'Inf','Pre','Cing'};
 States={'Base','Act_Base','Pstdrg2','Act_Pstdrg1','Pstdrg3','Act_Pstdrg2'};
@@ -20,7 +21,7 @@ for drug=1:length(Drugs)
             for BR=1:length(BrainReg)
                 for CT=1:length(CellTyp)
                     try 
-                        filename=[MainPath,SubPath1,SubPath2,States{state},'_',BrainReg{BR},'_',CellTyp{CT},'_dt20ms.mat'];%check for which dt-binned spike matrix 
+                        filename=[MainPath,SubPath1,SubPath2,States{state},'_',BrainReg{BR},'_',CellTyp{CT},'_dt',num2str(1000*dt,'%d'),'ms.mat'];%check for which dt-binned spike matrix 
                         load(filename);
                         SpikeMatrix_store=[SpikeMatrix_store;SpikeMatrix];
                     catch ME
