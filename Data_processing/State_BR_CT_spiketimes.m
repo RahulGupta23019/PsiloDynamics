@@ -1,6 +1,6 @@
 MainPath='C:\Users\xv20319\OneDrive - University of Bristol\Documents\MATLAB\Psilocybin\';% Change this based on where the data is saved locally.
 
-Drugs={'Saline_day0','Psilocybin_day0','Psilocybin_1mg'};
+Drugs={'Saline','Psilocybin_03mg','Psilocybin_1mg'};
 Rats={'S','T','U','V'};
 States={'Base','Act_Base','Pstdrg1','Pstdrg2','Act_Pstdrg1','Pstdrg3','Act_Pstdrg2'};
 BrainReg={'Inf','Pre','Cing'};
