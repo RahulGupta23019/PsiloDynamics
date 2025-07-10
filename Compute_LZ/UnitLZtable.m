@@ -1,5 +1,5 @@
 load('UnitWise.mat');
-Drugs={'Sal','Psil','Psil_h'};
+Drugs={'Sal','Psl03mg','Psl1mg'};
 Rats={'S','T','U','V'};
 BrainReg={'Inf','Pre','Cing'};
 States={'R0','A0','R2','A1','R3','A2'};
