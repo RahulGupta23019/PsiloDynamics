@@ -11,8 +11,8 @@ dt=0.020;%in sec. Replace with 0.010 for 10ms time bin.
 for drug=1:length(Drugs)
     for rat=1:length(Rats)
         SubPath1=[Drugs{drug},'\Rat ',Rats{rat},'\'];
-        SubPath2='ExtractdData_AllenFiltrd\';
-        SubPath3='SpkMatrix_AllenFiltrd\';
+        SubPath2='ExtractdData\';
+        SubPath3='SpkMatrix\';
         
         load([MainPath,SubPath1,'events_bsl.mat']);
         load([MainPath,SubPath1,'events_vi.mat']);
